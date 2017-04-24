@@ -13,5 +13,5 @@ import java.util.List;
 public interface UsuarioRepository extends CrudRepository<Usuario, Long> {
     Usuario findById(Long id) ;
     List<Usuario> findByNombre(String nombre) ;
-    List<Usuario> findByApellido(String apellido) ;
+    List<Usuario> findByApellidos(String apellido) ;
 }
