@@ -1,0 +1,1 @@
+alter table users add column direccion varchar(255);
