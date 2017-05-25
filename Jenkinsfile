@@ -2,11 +2,11 @@
 
 mavenTemplate('prod'){
     def sonarUrl = env.SONAR_URL
-    def version = env.CHANGE_ID
+    def version = '1.0-SNAPSHOT'
 
     stage('Deploy in Staging'){
       echo "Tagging image"
-      promoteImage('stage', 'prod', 'demodb', '1.0-SNAPSHOT')
+      promoteImage('stage', 'prod', 'demodb', version)
       waitDeployIsComplete('prod', 'demodb')
     }
 
